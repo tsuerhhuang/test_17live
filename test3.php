@@ -17,11 +17,9 @@ class TestController
 
 // 先經過middleware才經過controller
 Route::middleware('auth')->get('test', function () {});
-
-// 先經過controller才經過middleware
 Route::get('test', function () {})->middleware('auth');
 
-// 1/2 middleware 的說明
+// middleware 的說明
 
 class TestMiddleware
 {
